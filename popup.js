@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize code mirror
   const codemirror = CodeMirror.fromTextArea(document.querySelector("textarea"), {
     lineNumbers: true,
+    scrollbarStyle: "overlay",
     tabSize: 2,
     theme: "ayu-dark",
     viewportMargin: 30
