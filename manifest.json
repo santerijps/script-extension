@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "Script-Extension",
+  "description": "Bind custom scripts to specific hosts.",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_icon": "popup.png",
+    "default_popup": "popup.html"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+I",
+        "mac": "Command+I",
+        "chromeos": "Ctrl+I",
+        "linux": "Ctrl+I"
+      }
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ]
+
+}
